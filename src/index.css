@@ -1,0 +1,77 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-teal: #12BAA3;
+  --color-brand-darkTeal: #14ccb3;
+  --color-brand-lightTeal: #E0F2F1;
+  --color-brand-navy: #263238;
+  --color-brand-slate: #455A64;
+  --color-brand-light: #F8FAFC;
+  --font-sans: 'Inter', sans-serif;
+  --shadow-soft: 0 4px 20px rgba(0, 0, 0, 0.05);
+  --shadow-card: 0 10px 30px rgba(0, 191, 165, 0.1);
+}
+
+@layer base {
+  body {
+    @apply font-sans;
+    color: var(--color-brand-navy);
+    background-color: white;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+@layer utilities {
+  .scroll-reveal {
+    opacity: 0;
+    transform: translateX(-32px);
+    transition: opacity 1200ms ease, transform 1200ms cubic-bezier(0.22, 1, 0.36, 1);
+    will-change: opacity, transform;
+  }
+
+  .scroll-reveal.is-visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  .scroll-reveal[data-reveal="left"] {
+    transform: translateX(-32px);
+  }
+
+  .scroll-reveal[data-reveal="right"] {
+    transform: translateX(-32px);
+  }
+
+  .scroll-reveal[data-delay="1"] {
+    transition-delay: 120ms;
+  }
+
+  .scroll-reveal[data-delay="2"] {
+    transition-delay: 220ms;
+  }
+
+  .scroll-reveal[data-delay="3"] {
+    transition-delay: 320ms;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .scroll-reveal,
+    .scroll-reveal.is-visible {
+      opacity: 1;
+      transform: none;
+      transition: none;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .scroll-reveal,
+    .scroll-reveal.is-visible,
+    .scroll-reveal[data-reveal="left"],
+    .scroll-reveal[data-reveal="right"] {
+      opacity: 1;
+      transform: none;
+      transition: none;
+    }
+  }
+}

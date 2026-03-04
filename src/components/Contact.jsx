@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { MapPin, Phone, Mail, Send, Instagram, Facebook, Linkedin } from 'lucide-react';
 
 const ContactInfoBox = ({ icon: Icon, title, content, subContent }) => (
@@ -15,6 +15,57 @@ const ContactInfoBox = ({ icon: Icon, title, content, subContent }) => (
 );
 
 const Contact = () => {
+    const [formData, setFormData] = useState({
+        name: '',
+        phone: '',
+        email: '',
+        service: '',
+        message: ''
+    });
+
+    const smsNumber = '+5599984735063';
+    const whatsappNumber = '5511999999999';
+
+    const handleChange = (event) => {
+        const { id, value } = event.target;
+        setFormData((prev) => ({ ...prev, [id]: value }));
+    };
+
+    const buildMessage = () => {
+        const serviceLabelMap = {
+            residential: 'Residential Cleaning',
+            commercial: 'Commercial Cleaning',
+            'post-construction': 'Post-Construction',
+            windows: 'Windows Cleaning'
+        };
+
+        const serviceLabel = serviceLabelMap[formData.service] || formData.service || 'Not informed';
+
+        return [
+            'New quote request:',
+            `Name: ${formData.name}`,
+            `Phone: ${formData.phone}`,
+            `Email: ${formData.email || 'Not informed'}`,
+            `Service: ${serviceLabel}`,
+            `Message: ${formData.message || 'Not informed'}`
+        ].join('\n');
+    };
+
+    const openSms = () => {
+        const message = encodeURIComponent(buildMessage());
+        window.location.href = `sms:${smsNumber}?body=${message}`;
+    };
+
+    const openWhatsapp = () => {
+        const message = encodeURIComponent(buildMessage());
+        window.open(`https://wa.me/${whatsappNumber}?text=${message}`, '_blank');
+    };
+
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        openSms();
+    };
+
     return (
         <section id="contact" className="py-24 bg-[#eff7f6] relative scroll-mt-24 md:scroll-mt-28">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -35,13 +86,15 @@ const Contact = () => {
                     <div className="scroll-reveal bg-white rounded-[24px] p-8 md:p-10 shadow-lg border border-[#e8f1f0]" data-reveal="left">
                         <h3 className="text-[20px] font-bold text-[#1a5b55] mb-8">Request a Quote</h3>
 
-                        <form className="space-y-6">
+                        <form className="space-y-6" onSubmit={handleSubmit}>
                             <div className="grid md:grid-cols-2 gap-5">
                                 <div className="space-y-2">
                                     <label htmlFor="name" className="text-[13px] font-semibold text-[#648481]">Name *</label>
                                     <input
                                         type="text"
                                         id="name"
+                                        value={formData.name}
+                                        onChange={handleChange}
                                         className="w-full px-4 py-3 bg-white border border-[#e2ecea] rounded-[10px] focus:ring-2 focus:ring-[#14C8B0] focus:border-transparent outline-none transition-all placeholder:text-[#a0b8b6] text-[14px]"
                                         placeholder="Your full name"
                                         required
@@ -52,6 +105,8 @@ const Contact = () => {
                                     <input
                                         type="tel"
                                         id="phone"
+                                        value={formData.phone}
+                                        onChange={handleChange}
                                         className="w-full px-4 py-3 bg-white border border-[#e2ecea] rounded-[10px] focus:ring-2 focus:ring-[#14C8B0] focus:border-transparent outline-none transition-all placeholder:text-[#a0b8b6] text-[14px]"
                                         placeholder="+1 (555) 123-4567"
                                         required
@@ -64,6 +119,8 @@ const Contact = () => {
                                 <input
                                     type="email"
                                     id="email"
+                                    value={formData.email}
+                                    onChange={handleChange}
                                     className="w-full px-4 py-3 bg-white border border-[#e2ecea] rounded-[10px] focus:ring-2 focus:ring-[#14C8B0] focus:border-transparent outline-none transition-all placeholder:text-[#a0b8b6] text-[14px]"
                                     placeholder="you@email.com"
                                 />
@@ -73,9 +130,10 @@ const Contact = () => {
                                 <label htmlFor="service" className="text-[13px] font-semibold text-[#648481]">Service Type *</label>
                                 <select
                                     id="service"
+                                    value={formData.service}
+                                    onChange={handleChange}
                                     className="w-full px-4 py-3 bg-white border border-[#e2ecea] rounded-[10px] focus:ring-2 focus:ring-[#14C8B0] focus:border-transparent outline-none transition-all text-[#1a5b55] text-[14px] appearance-none"
                                     required
-                                    defaultValue=""
                                 >
                                     <option value="" disabled>Select a service</option>
                                     <option value="residential">Residential Cleaning</option>
@@ -90,17 +148,28 @@ const Contact = () => {
                                 <textarea
                                     id="message"
                                     rows="3"
+                                    value={formData.message}
+                                    onChange={handleChange}
                                     className="w-full px-4 py-3 bg-white border border-[#e2ecea] rounded-[10px] focus:ring-2 focus:ring-[#14C8B0] focus:border-transparent outline-none transition-all resize-none placeholder:text-[#a0b8b6] text-[14px]"
                                     placeholder="Describe the service you need, space size, preferred date..."
                                 ></textarea>
                             </div>
 
-                            <button
-                                type="submit"
-                                className="w-full bg-gradient-to-r from-[#13817a] to-[#14C8B0] hover:opacity-95 text-white font-bold py-3.5 px-8 rounded-full shadow-md flex items-center justify-center gap-2 transition-opacity duration-300 mt-2 text-[15px]"
-                            >
-                                <Send size={18} /> Send via WhatsApp
-                            </button>
+                            <div className="flex flex-col sm:flex-row gap-3 mt-2">
+                                <button
+                                    type="submit"
+                                    className="w-full bg-gradient-to-r from-[#13817a] to-[#14C8B0] hover:opacity-95 text-white font-bold py-3.5 px-8 rounded-full shadow-md flex items-center justify-center gap-2 transition-opacity duration-300 text-[15px]"
+                                >
+                                    <Send size={18} /> Send via SMS
+                                </button>
+                                <button
+                                    type="button"
+                                    onClick={openWhatsapp}
+                                    className="w-full bg-[#0f766e] hover:bg-[#0d6b64] text-white font-bold py-3.5 px-8 rounded-full shadow-md flex items-center justify-center gap-2 transition-colors duration-300 text-[15px]"
+                                >
+                                    <Send size={18} /> Send via WhatsApp
+                                </button>
+                            </div>
                         </form>
                     </div>
 

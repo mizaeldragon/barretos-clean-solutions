@@ -53,7 +53,11 @@ const Contact = () => {
 
     const openSms = () => {
         const message = encodeURIComponent(buildMessage());
-        window.location.href = `sms:${smsNumber}?body=${message}`;
+        const cleanSmsNumber = smsNumber.replace(/[^\d+]/g, '');
+        const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
+        const separator = isIOS ? '&' : '?';
+
+        window.location.href = `sms:${cleanSmsNumber}${separator}body=${message}`;
     };
 
     const openWhatsapp = () => {

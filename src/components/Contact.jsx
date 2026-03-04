@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import { MapPin, Phone, Mail, Send, Instagram, Facebook, Linkedin } from 'lucide-react';
 
 const ContactInfoBox = ({ icon: Icon, title, content, subContent }) => (
-    <div className="flex gap-4 items-center p-6 bg-white rounded-[16px] border border-[#e8f1f0] shadow-sm">
+    <div className="flex gap-4 items-center p-6 bg-white rounded-[16px] border border-[#e8f1f0] shadow-sm cursor-pointer">
         <div className="w-[44px] h-[44px] bg-gradient-to-r from-[#13817a] to-[#14C8B0] text-white rounded-[12px] flex items-center justify-center shrink-0">
             <Icon size={20} strokeWidth={2.5} />
         </div>
@@ -15,6 +15,7 @@ const ContactInfoBox = ({ icon: Icon, title, content, subContent }) => (
 );
 
 const Contact = () => {
+    const formRef = useRef(null);
     const [formData, setFormData] = useState({
         name: '',
         phone: '',
@@ -22,12 +23,45 @@ const Contact = () => {
         service: '',
         message: ''
     });
+    const [phoneError, setPhoneError] = useState('');
 
     const smsNumber = '+5599984735063';
     const whatsappNumber = '5511999999999';
 
+    const formatPhone = (value) => {
+        const raw = value.replace(/\D/g, '').slice(0, 11);
+        const hasCountryCode = raw.startsWith('1');
+        const digits = hasCountryCode ? raw.slice(1) : raw.slice(0, 10);
+
+        if (!digits.length) return hasCountryCode ? '+1 ' : '';
+
+        let formatted = '';
+        if (digits.length <= 3) {
+            formatted = `(${digits}`;
+        } else if (digits.length <= 6) {
+            formatted = `(${digits.slice(0, 3)}) ${digits.slice(3)}`;
+        } else {
+            formatted = `(${digits.slice(0, 3)}) ${digits.slice(3, 6)}-${digits.slice(6, 10)}`;
+        }
+
+        return hasCountryCode ? `+1 ${formatted}` : formatted;
+    };
+
+    const isValidPhone = (value) => {
+        const raw = value.replace(/\D/g, '');
+        const digits = raw.startsWith('1') ? raw.slice(1) : raw;
+        return digits.length === 10;
+    };
+
     const handleChange = (event) => {
         const { id, value } = event.target;
+
+        if (id === 'phone') {
+            setFormData((prev) => ({ ...prev, phone: formatPhone(value) }));
+            setPhoneError('');
+            return;
+        }
+
         setFormData((prev) => ({ ...prev, [id]: value }));
     };
 
@@ -51,7 +85,23 @@ const Contact = () => {
         ].join('\n');
     };
 
+    const validateBeforeSend = () => {
+        if (formRef.current && !formRef.current.reportValidity()) {
+            return false;
+        }
+
+        if (!isValidPhone(formData.phone)) {
+            setPhoneError('Enter a valid US phone number (e.g. +1 (555) 123-4567).');
+            return false;
+        }
+
+        setPhoneError('');
+        return true;
+    };
+
     const openSms = () => {
+        if (!validateBeforeSend()) return;
+
         const message = encodeURIComponent(buildMessage());
         const cleanSmsNumber = smsNumber.replace(/[^\d+]/g, '');
         const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
@@ -61,6 +111,8 @@ const Contact = () => {
     };
 
     const openWhatsapp = () => {
+        if (!validateBeforeSend()) return;
+
         const message = encodeURIComponent(buildMessage());
         window.open(`https://wa.me/${whatsappNumber}?text=${message}`, '_blank');
     };
@@ -90,7 +142,7 @@ const Contact = () => {
                     <div className="scroll-reveal bg-white rounded-[24px] p-8 md:p-10 shadow-lg border border-[#e8f1f0]" data-reveal="left">
                         <h3 className="text-[20px] font-bold text-[#1a5b55] mb-8">Request a Quote</h3>
 
-                        <form className="space-y-6" onSubmit={handleSubmit}>
+                        <form ref={formRef} className="space-y-6" onSubmit={handleSubmit}>
                             <div className="grid md:grid-cols-2 gap-5">
                                 <div className="space-y-2">
                                     <label htmlFor="name" className="text-[13px] font-semibold text-[#648481]">Name *</label>
@@ -113,8 +165,10 @@ const Contact = () => {
                                         onChange={handleChange}
                                         className="w-full px-4 py-3 bg-white border border-[#e2ecea] rounded-[10px] focus:ring-2 focus:ring-[#14C8B0] focus:border-transparent outline-none transition-all placeholder:text-[#a0b8b6] text-[14px]"
                                         placeholder="+1 (555) 123-4567"
+                                        inputMode="numeric"
                                         required
                                     />
+                                    {phoneError && <p className="text-[12px] text-red-500">{phoneError}</p>}
                                 </div>
                             </div>
 
@@ -188,7 +242,7 @@ const Contact = () => {
                         <ContactInfoBox
                             icon={Mail}
                             title="EMAIL"
-                            content="contact@limpamax.com"
+                            content="contact@barretoscleansolutions.com"
                             subContent="We respond within 2 hours"
                         />
                         <ContactInfoBox
@@ -199,7 +253,7 @@ const Contact = () => {
                         />
 
                         {/* Social Media */}
-                        <div className="bg-white p-6 rounded-[16px] border border-[#e8f1f0] shadow-sm mt-1">
+                        <div className="bg-white p-6 rounded-[16px] border border-[#e8f1f0] shadow-sm mt-1 cursor-pointer">
                             <h4 className="font-bold text-[#1a5b55] text-[13px] mb-4">Follow us on social media</h4>
                             <div className="flex flex-wrap gap-2.5">
                                 <a href="#" className="flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-[#ed4956] to-[#f77737] text-white rounded-[12px] text-[13px] font-semibold hover:opacity-90 transition-opacity">
@@ -215,7 +269,7 @@ const Contact = () => {
                         </div>
 
                         {/* Map Placeholder - replace query/address later with your real location */}
-                        <div className="w-full h-[190px] bg-gray-200 rounded-[16px] overflow-hidden relative shadow-sm mt-1 border border-[#e8f1f0]">
+                        <div className="w-full h-[190px] bg-gray-200 rounded-[16px] overflow-hidden relative shadow-sm mt-1 border border-[#e8f1f0] cursor-pointer">
                             <iframe
                                 title="Company Location Map"
                                 src="https://www.google.com/maps?q=Sao+Paulo+SP&output=embed"

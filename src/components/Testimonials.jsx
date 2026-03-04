@@ -26,7 +26,7 @@ const Testimonials = () => {
     const baseReviews = [
         {
             id: 1,
-            content: "We hired LimpaMax to clean our office weekly. The difference is huge — always a clean environment, discreet and professional team. I recommend them to every company!",
+            content: "We hired Barretos Clean Solutions to clean our office weekly. The difference is huge — always a clean environment, discreet and professional team. I recommend them to every company!",
             author: "Carlos Mendes",
             role: "Commercial Director - TechCorp",
             rating: 5,
@@ -44,7 +44,7 @@ const Testimonials = () => {
         },
         {
             id: 3,
-            content: "I manage a condominium with 80 units and LimpaMax takes care of all common areas. Punctuality, quality, and fair pricing. We're completely satisfied!",
+            content: "I manage a condominium with 80 units and Barretos Clean Solutions takes care of all common areas. Punctuality, quality, and fair pricing. We're completely satisfied!",
             author: "Roberto Santos",
             role: "Condo Administrator",
             rating: 5,
@@ -53,7 +53,7 @@ const Testimonials = () => {
         },
         {
             id: 4,
-            content: "LimpaMax has completely transformed my home. Their attention to detail is unmatched, and coming home to a perfectly clean house after a long day is priceless. Highly recommended!",
+            content: "Barretos Clean Solutions has completely transformed my home. Their attention to detail is unmatched, and coming home to a perfectly clean house after a long day is priceless. Highly recommended!",
             author: "Sarah Jenkins",
             role: "Homeowner",
             rating: 5,
@@ -146,7 +146,7 @@ const Testimonials = () => {
                     >
                         {baseReviews.map((review) => (
                             <div key={review.id} className="w-full md:w-1/2 lg:w-1/3 shrink-0 px-3">
-                                <div className="bg-white rounded-[24px] px-6 py-7 md:px-8 md:py-8 relative flex flex-col shadow-lg h-full">
+                                <div className="bg-white rounded-[24px] px-6 py-7 md:px-8 md:py-8 relative flex flex-col shadow-lg h-full cursor-pointer">
                                     {/* Quote Icon */}
                                     <QuoteIcon className="text-[#A3E6DE] mb-4 w-[36px] h-[36px]" />
 

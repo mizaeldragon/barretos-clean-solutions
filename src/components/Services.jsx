@@ -8,7 +8,7 @@ import service4 from '../assets/images/service4.png';
 
 const ServiceCard = ({ icon: Icon, title, description, features, image, revealDelay }) => {
     return (
-        <div className="scroll-reveal bg-white rounded-[24px] overflow-hidden shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-slate-100 transition-all duration-300 hover:shadow-[0_8px_30px_rgba(0,191,165,0.08)] flex flex-col group h-full" data-delay={revealDelay}>
+        <div className="scroll-reveal bg-white rounded-[24px] overflow-hidden shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-slate-100 transition-all duration-300 hover:shadow-[0_8px_30px_rgba(0,191,165,0.08)] flex flex-col group h-full cursor-pointer" data-delay={revealDelay}>
             {/* Image Header */}
             <div className="h-[240px] relative overflow-hidden bg-slate-50">
                 <img

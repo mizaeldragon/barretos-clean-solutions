@@ -70,7 +70,7 @@ const Footer = () => {
                             <li><a href="#gallery" className="text-[#b7d4cf] hover:text-brand-teal transition-colors text-sm">Our Work</a></li>
                             <li><a href="#testimonials" className="text-[#b7d4cf] hover:text-brand-teal transition-colors text-sm">Testimonials</a></li>
                             <li><a href="#contact" className="text-[#b7d4cf] hover:text-brand-teal transition-colors text-sm">Contact Us</a></li>
-                            <li><a href="#" className="text-[#b7d4cf] hover:text-brand-teal transition-colors text-sm">Privacy Policy</a></li>
+                            <li><a href="/privacy-policy.html" className="text-[#b7d4cf] hover:text-brand-teal transition-colors text-sm">Privacy Policy</a></li>
                         </ul>
                     </div>
 
@@ -82,8 +82,8 @@ const Footer = () => {
                         &copy; {new Date().getFullYear()} Barretos Clean Solutions. All rights reserved.
                     </p>
                     <div className="flex justify-center gap-6 text-[#93b8b1]">
-                        <a href="#" className="hover:text-brand-teal transition-colors">Terms of Service</a>
-                        <a href="#" className="hover:text-brand-teal transition-colors">Privacy Policy</a>
+                        <a href="/terms-of-service.html" className="hover:text-brand-teal transition-colors">Terms of Service</a>
+                        <a href="/privacy-policy.html" className="hover:text-brand-teal transition-colors">Privacy Policy</a>
                     </div>
                 </div>
 

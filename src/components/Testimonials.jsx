@@ -31,7 +31,7 @@ const Testimonials = () => {
             role: "Commercial Director - TechCorp",
             rating: 5,
             avatar: "CM",
-            bgColor: "bg-[#14C8B0]"
+            bgColor: "bg-[#38C6FF]"
         },
         {
             id: 2,
@@ -40,7 +40,7 @@ const Testimonials = () => {
             role: "Architect",
             rating: 5,
             avatar: "AF",
-            bgColor: "bg-[#13817a]"
+            bgColor: "bg-[#1E40FF]"
         },
         {
             id: 3,
@@ -58,7 +58,7 @@ const Testimonials = () => {
             role: "Homeowner",
             rating: 5,
             avatar: "SJ",
-            bgColor: "bg-[#14C8B0]"
+            bgColor: "bg-[#38C6FF]"
         },
         {
             id: 5,
@@ -67,7 +67,7 @@ const Testimonials = () => {
             role: "Store Owner",
             rating: 5,
             avatar: "DL",
-            bgColor: "bg-[#13817a]"
+            bgColor: "bg-[#1E40FF]"
         },
         {
             id: 6,
@@ -123,7 +123,7 @@ const Testimonials = () => {
     const totalDots = Math.max(1, baseReviews.length - itemsPerView + 1);
 
     return (
-        <section id="testimonials" className="py-24 bg-gradient-to-r from-[#13817a] to-[#14C8B0] relative overflow-hidden scroll-mt-24 md:scroll-mt-28">
+        <section id="testimonials" className="py-24 bg-gradient-to-r from-[#1E40FF] to-[#38C6FF] relative overflow-hidden scroll-mt-24 md:scroll-mt-28">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full overflow-hidden">
                 {/* Header */}
                 <div className="scroll-reveal text-center max-w-3xl mx-auto mb-16 space-y-3">
@@ -146,7 +146,7 @@ const Testimonials = () => {
                     >
                         {baseReviews.map((review) => (
                             <div key={review.id} className="w-full md:w-1/2 lg:w-1/3 shrink-0 px-3">
-                                <div className="bg-white rounded-[24px] px-6 py-7 md:px-8 md:py-8 relative flex flex-col shadow-lg h-full cursor-pointer">
+                                <div className="bg-white rounded-[24px] px-6 py-7 md:px-8 md:py-8 relative flex flex-col shadow-[0_10px_28px_rgba(37,99,255,0.14)] h-full cursor-pointer">
                                     {/* Quote Icon */}
                                     <QuoteIcon className="text-[#A3E6DE] mb-4 w-[36px] h-[36px]" />
 
@@ -169,8 +169,8 @@ const Testimonials = () => {
                                                 {review.avatar}
                                             </div>
                                             <div>
-                                                <h4 className="text-[#1a5b55] font-bold text-[14px] leading-tight mb-0.5">{review.author}</h4>
-                                                <p className="text-[#629391] text-[13px] font-medium">{review.role}</p>
+                                                <h4 className="text-[#1E3A8A] font-bold text-[14px] leading-tight mb-0.5">{review.author}</h4>
+                                                <p className="text-[#64748B] text-[13px] font-medium">{review.role}</p>
                                             </div>
                                         </div>
                                     </div>
@@ -218,3 +218,5 @@ const Testimonials = () => {
 };
 
 export default Testimonials;
+
+

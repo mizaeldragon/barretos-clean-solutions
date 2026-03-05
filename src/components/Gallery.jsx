@@ -34,8 +34,8 @@ const Gallery = () => {
                             key={filter}
                             onClick={() => setActiveFilter(filter)}
                             className={`px-8 py-2.5 rounded-full text-[15px] font-bold transition-all duration-300 ${activeFilter === filter
-                                ? 'bg-gradient-to-r from-[#13817a] to-[#14C8B0] text-white shadow-sm'
-                                : 'bg-[#eff7f6] text-[#2c7a7b] hover:bg-[#e2efec] hover:text-[#1a5b55]'
+                                ? 'bg-gradient-to-r from-[#1E40FF] to-[#38C6FF] text-white shadow-sm'
+                                : 'bg-[#F1F5FF] text-[#1D4ED8] hover:bg-[#E6EDFF] hover:text-[#1E3A8A]'
                                 }`}
                         >
                             {filter}
@@ -64,7 +64,7 @@ const Gallery = () => {
                 </div>
 
                 {/* <div className="text-center mt-12">
-                    <button className="inline-flex items-center justify-center px-10 py-3.5 text-[#14C8B0] font-bold text-[17px] bg-white border-[2.5px] border-[#14C8B0] rounded-full hover:bg-[#f0fbf9] transition-colors duration-300">
+                    <button className="inline-flex items-center justify-center px-10 py-3.5 text-[#38C6FF] font-bold text-[17px] bg-white border-[2.5px] border-[#38C6FF] rounded-full hover:bg-[#EFF6FF] transition-colors duration-300">
                         View More Projects
                     </button>
                 </div> */}
@@ -74,3 +74,5 @@ const Gallery = () => {
 };
 
 export default Gallery;
+
+

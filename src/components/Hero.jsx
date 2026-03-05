@@ -3,7 +3,7 @@ import { Sparkles } from 'lucide-react';
 
 const Hero = () => {
     return (
-        <section className="relative pt-32 pb-20 lg:pt-40 lg:pb-32 overflow-hidden min-h-[90vh] flex flex-col justify-center bg-[#168578]">
+        <section className="relative pt-32 pb-20 lg:pt-40 lg:pb-32 overflow-hidden min-h-[90vh] flex flex-col justify-center bg-[#1E40FF]">
             {/* Background Image & Overlay */}
             <div className="absolute inset-0 z-0">
                 <img
@@ -11,8 +11,8 @@ const Hero = () => {
                     alt="Clean and modern office space"
                     className="w-full h-full object-cover"
                 />
-                <div className="absolute inset-0 bg-[#168578]/90 mix-blend-multiply"></div>
-                <div className="absolute inset-0 bg-[#062925]/75"></div>
+                <div className="absolute inset-0 bg-[#1E40FF]/90 mix-blend-multiply"></div>
+                <div className="absolute inset-0 bg-[#0A1535]/75"></div>
             </div>
 
             {/* Main Content Container */}
@@ -39,7 +39,7 @@ const Hero = () => {
 
                 {/* CTA Buttons */}
                 <div className="scroll-reveal flex flex-col sm:flex-row justify-center gap-5 mb-24 w-full relative z-10" data-delay="3">
-                    <button className="bg-[#12BAA3] text-white px-8 py-3.5 rounded-full font-bold text-[17px] hover:bg-[#14ccb3] transition-colors shadow-lg shadow-[#12BAA3]/30 w-full sm:w-auto">
+                    <button className="bg-[#2563FF] text-white px-8 py-3.5 rounded-full font-bold text-[17px] hover:bg-[#4DA3FF] transition-colors shadow-lg shadow-[#2563FF]/30 w-full sm:w-auto">
                         Get a Free Quote
                     </button>
                     <button className="bg-transparent border-2 border-white text-white px-8 py-3.5 rounded-full font-bold text-[17px] hover:bg-white/10 transition-colors w-full sm:w-auto">
@@ -67,3 +67,5 @@ const Hero = () => {
 };
 
 export default Hero;
+
+

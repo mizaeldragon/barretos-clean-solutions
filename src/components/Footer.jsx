@@ -4,11 +4,11 @@ import logo from '../assets/images/logo-barretos.png';
 
 const Footer = () => {
     return (
-        <footer className="bg-[#062723] pt-20 pb-10">
+        <footer className="bg-[#0A1535] pt-20 pb-10">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
                 {/* Pre-footer CTA */}
-                <div className="scroll-reveal bg-gradient-to-r from-[#13817a] to-[#14C8B0] rounded-3xl p-8 md:p-12 mb-16 flex flex-col md:flex-row items-center justify-between gap-8 relative overflow-hidden shadow-2xl">
+                <div className="scroll-reveal bg-gradient-to-r from-[#1E40FF] to-[#38C6FF] rounded-3xl p-8 md:p-12 mb-16 flex flex-col md:flex-row items-center justify-between gap-8 relative overflow-hidden shadow-2xl">
                     <div className="absolute top-0 right-0 -mr-20 -mt-20 w-64 h-64 bg-white/10 rounded-full blur-2xl"></div>
 
                     <div className="relative z-10 text-center md:text-left">
@@ -93,3 +93,5 @@ const Footer = () => {
 };
 
 export default Footer;
+
+

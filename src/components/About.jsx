@@ -55,10 +55,10 @@ const About = () => {
                     <span className="text-brand-teal font-bold tracking-widest text-sm uppercase mb-3 block">
                         OUR STORY
                     </span>
-                    <h2 className="text-4xl md:text-5xl font-bold text-[#1a5b55] mb-6">
+                    <h2 className="text-4xl md:text-5xl font-bold text-[#1E3A8A] mb-6">
                         Who We Are
                     </h2>
-                    <p className="text-lg text-[#648481] leading-relaxed">
+                    <p className="text-lg text-[#64748B] leading-relaxed">
                         For over 15 years, transforming spaces and earning the trust of thousands of clients across the region.
                     </p>
                 </div>
@@ -78,22 +78,22 @@ const About = () => {
 
                         {/* Floating Badge */}
                         <div className="absolute -bottom-8 right-4 md:right-8 bg-white p-4 md:p-6 rounded-2xl shadow-[0_10px_40px_rgba(0,0,0,0.08)] flex items-center gap-4 border border-gray-50 max-w-[220px]">
-                            <div className="w-14 h-14 shrink-0 rounded-[16px] bg-gradient-to-r from-[#13817a] to-[#14C8B0] flex items-center justify-center text-white">
+                            <div className="w-14 h-14 shrink-0 rounded-[16px] bg-gradient-to-r from-[#1E40FF] to-[#38C6FF] flex items-center justify-center text-white">
                                 <Users size={28} />
                             </div>
                             <div>
-                                <div className="text-[#1a5b55] font-bold text-2xl md:text-3xl leading-none mb-1">50+</div>
-                                <div className="text-[#629391] text-xs font-medium uppercase tracking-wider">Professionals</div>
+                                <div className="text-[#1E3A8A] font-bold text-2xl md:text-3xl leading-none mb-1">50+</div>
+                                <div className="text-[#64748B] text-xs font-medium uppercase tracking-wider">Professionals</div>
                             </div>
                         </div>
                     </div>
 
                     {/* Right Column - Text & Core Values Cards */}
                     <div className="w-full lg:w-1/2 mt-12 lg:mt-0 lg:pt-4">
-                        <h3 className="text-2xl md:text-3xl font-bold text-[#1a5b55] mb-6">
+                        <h3 className="text-2xl md:text-3xl font-bold text-[#1E3A8A] mb-6">
                             A company born from care
                         </h3>
-                        <div className="text-[15px] text-[#648481] space-y-5 leading-relaxed mb-8">
+                        <div className="text-[15px] text-[#64748B] space-y-5 leading-relaxed mb-8">
                             <p>
                                 Founded in 2009, <strong className="text-brand-darkTeal font-bold">Barretos Clean Solutions</strong> was born with a simple purpose: to offer quality cleaning with the warmth of treating every client like family. What started with a team of 5 now has over 50 dedicated professionals.
                             </p>
@@ -105,13 +105,13 @@ const About = () => {
                         {/* Core Values Vertical List */}
                         <div className="space-y-4 max-w-[95%]">
                             {coreValues.map((item, index) => (
-                                <div key={index} className="bg-[#EDF7F6] rounded-[20px] p-2 flex gap-4 border border-transparent hover:border-brand-teal/20 transition-colors cursor-pointer">
-                                    <div className="w-12 h-12 shrink-0 rounded-[16px] bg-gradient-to-r from-[#13817a] to-[#14C8B0] flex items-center justify-center text-white shadow-sm mt-1">
+                                <div key={index} className="bg-[#EEF4FF] rounded-[20px] p-2 flex gap-4 border border-transparent hover:border-brand-teal/20 transition-colors cursor-pointer">
+                                    <div className="w-12 h-12 shrink-0 rounded-[16px] bg-gradient-to-r from-[#1E40FF] to-[#38C6FF] flex items-center justify-center text-white shadow-sm mt-1">
                                         <item.icon size={22} />
                                     </div>
                                     <div>
-                                        <h4 className="text-[17px] font-bold text-[#1a5b55] mb-2">{item.title}</h4>
-                                        <p className="text-[14px] text-[#629391] leading-relaxed">
+                                        <h4 className="text-[17px] font-bold text-[#1E3A8A] mb-2">{item.title}</h4>
+                                        <p className="text-[14px] text-[#64748B] leading-relaxed">
                                             {item.description}
                                         </p>
                                     </div>
@@ -124,14 +124,14 @@ const About = () => {
                 {/* --- BOTTOM SECTION (4-Column Grid) --- */}
                 <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 pt-10">
                     {bottomFeatures.map((feature, index) => (
-                        <div key={index} className="scroll-reveal bg-white rounded-[24px] p-6 lg:px-6 lg:py-8 border border-slate-100 shadow-sm hover:shadow-md transition-shadow text-center flex flex-col items-center cursor-pointer" data-delay={(index % 3) + 1}>
-                            <div className="w-14 h-14 rounded-[18px] bg-gradient-to-r from-[#13817a] to-[#14C8B0] flex items-center justify-center text-white mb-5 shadow-[0_4px_12px_rgba(20,200,176,0.25)]">
+                        <div key={index} className="scroll-reveal bg-white rounded-[24px] p-6 lg:px-6 lg:py-8 border border-slate-100 shadow-[0_8px_24px_rgba(37,99,255,0.1)] hover:shadow-[0_12px_30px_rgba(56,198,255,0.2)] transition-shadow text-center flex flex-col items-center cursor-pointer" data-delay={(index % 3) + 1}>
+                            <div className="w-14 h-14 rounded-[18px] bg-gradient-to-r from-[#1E40FF] to-[#38C6FF] flex items-center justify-center text-white mb-5 shadow-[0_5px_14px_rgba(37,99,255,0.28)]">
                                 <feature.icon size={24} />
                             </div>
-                            <h4 className="text-[16px] font-bold text-[#1a5b55] mb-2">
+                            <h4 className="text-[16px] font-bold text-[#1E3A8A] mb-2">
                                 {feature.title}
                             </h4>
-                            <p className="text-[13.5px] text-[#629391] leading-relaxed">
+                            <p className="text-[13.5px] text-[#64748B] leading-relaxed">
                                 {feature.description}
                             </p>
                         </div>
@@ -144,3 +144,5 @@ const About = () => {
 };
 
 export default About;
+
+

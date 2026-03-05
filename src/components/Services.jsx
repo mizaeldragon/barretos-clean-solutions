@@ -8,7 +8,7 @@ import service4 from '../assets/images/service4.png';
 
 const ServiceCard = ({ icon: Icon, title, description, features, image, revealDelay }) => {
     return (
-        <div className="scroll-reveal bg-white rounded-[24px] overflow-hidden shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-slate-100 transition-all duration-300 hover:shadow-[0_8px_30px_rgba(0,191,165,0.08)] flex flex-col group h-full cursor-pointer" data-delay={revealDelay}>
+        <div className="scroll-reveal bg-white rounded-[24px] overflow-hidden shadow-[0_10px_28px_rgba(37,99,255,0.12)] border border-slate-100 transition-all duration-300 hover:shadow-[0_14px_36px_rgba(56,198,255,0.22)] flex flex-col group h-full cursor-pointer" data-delay={revealDelay}>
             {/* Image Header */}
             <div className="h-[240px] relative overflow-hidden bg-slate-50">
                 <img
@@ -25,8 +25,8 @@ const ServiceCard = ({ icon: Icon, title, description, features, image, revealDe
 
             {/* Content */}
             <div className="p-8 md:p-10 flex-1 flex flex-col">
-                <h3 className="text-[22px] font-bold text-[#145a55] mb-3">{title}</h3>
-                <p className="text-[#648481] text-[15px] mb-8 leading-relaxed">
+                <h3 className="text-[22px] font-bold text-[#1E3A8A] mb-3">{title}</h3>
+                <p className="text-[#64748B] text-[15px] mb-8 leading-relaxed">
                     {description}
                 </p>
 
@@ -105,8 +105,8 @@ const Services = () => {
             <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="scroll-reveal text-center max-w-3xl mx-auto mb-16">
                     <h2 className="text-[13px] font-bold tracking-[0.15em] text-brand-teal uppercase mb-4">WHAT WE DO</h2>
-                    <p className="text-4xl md:text-5xl font-bold text-[#145a55] mb-5">Our Services</p>
-                    <p className="text-[#648481] text-[17px] leading-relaxed max-w-2xl mx-auto">
+                    <p className="text-4xl md:text-5xl font-bold text-[#1E3A8A] mb-5">Our Services</p>
+                    <p className="text-[#64748B] text-[17px] leading-relaxed max-w-2xl mx-auto">
                         Complete cleaning solutions for homes, businesses, and construction sites. Quality and trust in every service.
                     </p>
                 </div>
@@ -122,3 +122,5 @@ const Services = () => {
 };
 
 export default Services;
+
+

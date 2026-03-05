@@ -82,7 +82,7 @@ const Header = () => {
     return (
         <header className="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
             <div className={`max-w-7xl mx-auto px-0 md:px-6 lg:px-8 transition-all duration-300 ${isScrolled ? 'pt-0 md:pt-3' : 'pt-0'}`}>
-                <div className={`transition-all duration-300 ${isScrolled ? 'bg-[#062925]/90 backdrop-blur-md shadow-lg md:rounded-2xl md:border md:border-white/10 md:shadow-2xl px-4 md:px-6' : 'bg-transparent px-4 md:px-0'}`}>
+                <div className={`transition-all duration-300 ${isScrolled ? 'bg-[#0A1535]/90 backdrop-blur-md shadow-lg md:rounded-2xl md:border md:border-white/10 md:shadow-2xl px-4 md:px-6' : 'bg-transparent px-4 md:px-0'}`}>
                     <div className={`flex justify-between items-center transition-all duration-300 ${isScrolled ? 'py-2 md:py-3' : 'py-4 md:py-6'}`}>
                     {/* Logo */}
                     <div className="flex items-center cursor-pointer">
@@ -143,7 +143,7 @@ const Header = () => {
                                             {link.label}
                                         </a>
                                     ))}
-                                    <button className="mt-2 bg-gradient-to-r from-[#13817a] to-[#14C8B0] text-white px-5 py-2.5 rounded-full font-semibold transition-opacity hover:opacity-95 text-left">
+                                    <button className="mt-2 bg-gradient-to-r from-[#1E40FF] to-[#38C6FF] text-white px-5 py-2.5 rounded-full font-semibold transition-opacity hover:opacity-95 text-left">
                                         Request a Quote
                                     </button>
                                 </div>
@@ -157,3 +157,5 @@ const Header = () => {
 };
 
 export default Header;
+
+

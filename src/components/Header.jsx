@@ -86,7 +86,7 @@ const Header = () => {
                     <div className={`flex justify-between items-center transition-all duration-300 ${isScrolled ? 'py-2 md:py-3' : 'py-4 md:py-6'}`}>
                     {/* Logo */}
                     <div className="flex items-center cursor-pointer">
-                        <img src={logo} alt="Barretos Clean Solutions" className={`w-auto drop-shadow-md transition-all duration-300 ${isScrolled ? 'h-12 md:h-16' : 'h-16 md:h-24'}`} />
+                        <img src={logo} alt="Barretos Cleaning Solutions" className={`w-auto drop-shadow-md transition-all duration-300 ${isScrolled ? 'h-12 md:h-16' : 'h-16 md:h-24'}`} />
                     </div>
 
                     {/* Desktop Navigation */}
@@ -128,7 +128,7 @@ const Header = () => {
 
                     {isMobileMenuOpen && (
                         <div className="md:hidden pb-4">
-                            <nav className="rounded-2xl border border-white/20 bg-[#0b3a35]/92 backdrop-blur-md px-4 py-4 shadow-xl">
+                            <nav className="rounded-2xl border border-white/20 bg-[#102A66]/92 backdrop-blur-md px-4 py-4 shadow-xl">
                                 <div className="flex flex-col gap-3">
                                     {navLinks.map((link) => (
                                         <a
@@ -157,5 +157,6 @@ const Header = () => {
 };
 
 export default Header;
+
 
 

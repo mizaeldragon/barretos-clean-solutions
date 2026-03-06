@@ -1,5 +1,5 @@
 import React, { useRef, useState } from 'react';
-import { MapPin, Phone, Mail, Send, Instagram, Facebook, Linkedin } from 'lucide-react';
+import { MapPin, Phone, Mail, Send, Instagram } from 'lucide-react';
 
 const ContactInfoBox = ({ icon: Icon, title, content, subContent }) => (
     <div className="flex gap-4 items-center p-6 bg-white rounded-[16px] border border-[#E8EFFF] shadow-[0_8px_22px_rgba(37,99,255,0.1)] cursor-pointer">
@@ -260,10 +260,7 @@ const Contact = () => {
                                     <Instagram size={16} /> Instagram
                                 </a>
                                 <a href="#" className="flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-[#1E40FF] to-[#38C6FF] text-white rounded-[12px] text-[13px] font-semibold hover:opacity-90 transition-opacity">
-                                    <Facebook size={16} /> Facebook
-                                </a>
-                                <a href="#" className="flex items-center gap-2 px-5 py-2.5 bg-gradient-to-l from-[#1D4ED8] to-[#38C6FF] text-white rounded-[12px] text-[13px] font-semibold hover:opacity-90 transition-opacity">
-                                    <Linkedin size={16} /> LinkedIn
+                                    <Phone size={16} /> WhatsApp
                                 </a>
                             </div>
                         </div>

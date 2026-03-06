@@ -27,6 +27,19 @@
 }
 
 @layer utilities {
+  @keyframes whatsappPulse {
+    0%, 100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.06);
+    }
+  }
+
+  .whatsapp-pulse {
+    animation: whatsappPulse 2s ease-in-out infinite;
+  }
+
   .scroll-reveal {
     opacity: 0;
     transform: translateX(-32px);

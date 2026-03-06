@@ -1,5 +1,5 @@
 import React from 'react';
-import { Facebook, Twitter, Instagram, Linkedin } from 'lucide-react';
+import { Instagram, Phone } from 'lucide-react';
 import logo from '../assets/images/logo-barretos.png';
 
 const Footer = () => {
@@ -29,23 +29,17 @@ const Footer = () => {
                     {/* Brand & Intro */}
                     <div className="lg:col-span-1">
                         <div className="flex items-center mb-6 cursor-pointer">
-                            <img src={logo} alt="Barretos Clean Solutions" className="h-14 w-auto drop-shadow-md" />
+                            <img src={logo} alt="Barretos Cleaning Solutions" className="h-14 w-auto drop-shadow-md" />
                         </div>
                         <p className="text-[#b7d4cf] mb-8 leading-relaxed text-sm">
                             Providing top-tier residential and commercial cleaning services tailored to your specific needs. Your satisfaction is our priority.
                         </p>
                         <div className="flex gap-4">
-                            <a href="#" aria-label="Facebook" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-[#b7d4cf] hover:bg-brand-teal hover:text-white transition-colors duration-300">
-                                <Facebook size={18} />
-                            </a>
-                            <a href="#" aria-label="Twitter" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-[#b7d4cf] hover:bg-brand-teal hover:text-white transition-colors duration-300">
-                                <Twitter size={18} />
-                            </a>
                             <a href="#" aria-label="Instagram" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-[#b7d4cf] hover:bg-brand-teal hover:text-white transition-colors duration-300">
                                 <Instagram size={18} />
                             </a>
-                            <a href="#" aria-label="LinkedIn" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-[#b7d4cf] hover:bg-brand-teal hover:text-white transition-colors duration-300">
-                                <Linkedin size={18} />
+                            <a href="#" aria-label="WhatsApp" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-[#b7d4cf] hover:bg-brand-teal hover:text-white transition-colors duration-300">
+                                <Phone size={18} />
                             </a>
                         </div>
                     </div>
@@ -79,7 +73,7 @@ const Footer = () => {
                 {/* Copyright Footer */}
                 <div className="scroll-reveal pt-8 border-t border-white/10 text-center md:flex md:justify-between items-center text-sm" data-delay="2">
                     <p className="text-[#93b8b1] mb-4 md:mb-0">
-                        &copy; {new Date().getFullYear()} Barretos Clean Solutions. All rights reserved.
+                        &copy; {new Date().getFullYear()} Barretos Cleaning Solutions. All rights reserved.
                     </p>
                     <div className="flex justify-center gap-6 text-[#93b8b1]">
                         <a href="/terms-of-service.html" className="hover:text-brand-teal transition-colors">Terms of Service</a>
@@ -93,5 +87,6 @@ const Footer = () => {
 };
 
 export default Footer;
+
 
 

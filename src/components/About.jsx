@@ -71,7 +71,7 @@ const About = () => {
                         <div className="relative rounded-3xl overflow-hidden aspect-[4/3] lg:aspect-auto lg:h-[600px] shadow-lg">
                             <img
                                 src={teamImage}
-                                alt="Barretos Clean Solutions professional cleaning team"
+                                alt="Barretos Cleaning Solutions professional cleaning team"
                                 className="w-full h-full object-cover object-center"
                             />
                         </div>
@@ -95,7 +95,7 @@ const About = () => {
                         </h3>
                         <div className="text-[15px] text-[#64748B] space-y-5 leading-relaxed mb-8">
                             <p>
-                                Founded in 2009, <strong className="text-brand-darkTeal font-bold">Barretos Clean Solutions</strong> was born with a simple purpose: to offer quality cleaning with the warmth of treating every client like family. What started with a team of 5 now has over 50 dedicated professionals.
+                                Founded in 2009, <strong className="text-brand-darkTeal font-bold">Barretos Cleaning Solutions</strong> was born with a simple purpose: to offer quality cleaning with the warmth of treating every client like family. What started with a team of 5 now has over 50 dedicated professionals.
                             </p>
                             <p>
                                 We serve homes, offices, condominiums, and large construction sites, always with the same values that brought us here: commitment, punctuality, and excellence.
@@ -144,5 +144,6 @@ const About = () => {
 };
 
 export default About;
+
 
 

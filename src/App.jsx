@@ -7,6 +7,7 @@ import Testimonials from './components/Testimonials';
 import Gallery from './components/Gallery';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import WhatsAppFloatButton from './components/WhatsAppFloatButton';
 import './App.css';
 
 function App() {
@@ -44,6 +45,7 @@ function App() {
         <Contact />
       </main>
       <Footer />
+      <WhatsAppFloatButton />
     </div>
   );
 }

@@ -16,14 +16,18 @@ const ContactInfoBox = ({ icon: Icon, title, content, subContent }) => (
 
 const Contact = () => {
     const formRef = useRef(null);
-    const [formData, setFormData] = useState({
+    const initialFormData = {
         name: '',
         phone: '',
         email: '',
         service: '',
         message: ''
+    };
+    const [formData, setFormData] = useState({
+        ...initialFormData
     });
     const [phoneError, setPhoneError] = useState('');
+    const [smsToastVisible, setSmsToastVisible] = useState(false);
 
     const smsNumber = '+15514075453';
     const whatsappNumber = '15514075453';
@@ -107,7 +111,14 @@ const Contact = () => {
         const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
         const separator = isIOS ? '&' : '?';
 
-        window.location.href = `sms:${cleanSmsNumber}${separator}body=${message}`;
+        setSmsToastVisible(true);
+        setTimeout(() => {
+            setSmsToastVisible(false);
+        }, 3000);
+        setTimeout(() => {
+            window.location.href = `sms:${cleanSmsNumber}${separator}body=${message}`;
+        }, 220);
+        setFormData(initialFormData);
     };
 
     const openWhatsapp = () => {
@@ -115,6 +126,7 @@ const Contact = () => {
 
         const message = encodeURIComponent(buildMessage());
         window.open(`https://wa.me/${whatsappNumber}?text=${message}`, '_blank');
+        setFormData(initialFormData);
     };
 
     const handleSubmit = (event) => {
@@ -281,6 +293,12 @@ const Contact = () => {
                     </div>
                 </div>
             </div>
+
+            {smsToastVisible && (
+                <div className="fixed bottom-6 left-1/2 -translate-x-1/2 z-[70] bg-[#1E40FF] text-white text-sm font-semibold px-4 py-2.5 rounded-full shadow-[0_10px_24px_rgba(30,64,255,0.35)]">
+                    SMS opened successfully. Complete the send in your messages app.
+                </div>
+            )}
         </section>
     );
 };

@@ -1,10 +1,9 @@
 import React from 'react';
-import { Home, Building2, HardHat, Sparkles, CheckCircle2, MoveRight } from 'lucide-react';
+import { Home, Building2, HardHat, CheckCircle2, MoveRight } from 'lucide-react';
 
 import service1 from '../assets/images/service1.png';
 import service2 from '../assets/images/service2.png';
 import service3 from '../assets/images/service3.png';
-import service4 from '../assets/images/service4.png';
 
 const ServiceCard = ({ icon: Icon, title, description, features, image, revealDelay }) => {
     return (
@@ -59,7 +58,7 @@ const Services = () => {
                 'Full room cleaning',
                 'Bathroom & kitchen sanitizing',
                 'Floor vacuuming & washing',
-                'Interior window cleaning'
+                'Detail-focused room finishing'
             ]
         },
         {
@@ -84,18 +83,6 @@ const Services = () => {
                 'Floor & tile cleaning',
                 'Paint residue removal',
                 'Final polishing & finishing'
-            ]
-        },
-        {
-            icon: Sparkles,
-            title: 'Windows & Facades',
-            description: 'Specialized cleaning of exterior windows and building facades at height with proper equipment and full safety.',
-            image: service4,
-            features: [
-                'High-rise exterior windows',
-                'Building facades',
-                'Specialized equipment',
-                'Height-certified team'
             ]
         }
     ];

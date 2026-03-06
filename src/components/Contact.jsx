@@ -73,8 +73,7 @@ const Contact = () => {
         const serviceLabelMap = {
             residential: 'Residential Cleaning',
             commercial: 'Commercial Cleaning',
-            'post-construction': 'Post-Construction',
-            windows: 'Windows Cleaning'
+            'post-construction': 'Post-Construction'
         };
 
         const serviceLabel = serviceLabelMap[formData.service] || formData.service || 'Not informed';
@@ -209,7 +208,6 @@ const Contact = () => {
                                     <option value="residential">Residential Cleaning</option>
                                     <option value="commercial">Commercial Cleaning</option>
                                     <option value="post-construction">Post-Construction</option>
-                                    <option value="windows">Windows Cleaning</option>
                                 </select>
                             </div>
 

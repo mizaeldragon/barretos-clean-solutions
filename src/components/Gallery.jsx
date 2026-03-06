@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 const Gallery = () => {
     const [activeFilter, setActiveFilter] = useState('All');
 
-    const filters = ['All', 'Residential', 'Commercial', 'Post-Construction', 'Windows'];
+    const filters = ['All', 'Residential', 'Commercial', 'Post-Construction'];
 
     const galleryItems = [
         { id: 1, category: 'Residential', image: 'https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?q=80&w=1374&auto=format&fit=crop', title: 'Living Room Clean' },
@@ -46,7 +46,7 @@ const Gallery = () => {
                 {/* Image Grid */}
                 <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
                     {filteredItems.map(item => (
-                        <div key={item.id} className="scroll-reveal group relative aspect-video sm:aspect-square overflow-hidden rounded-2xl cursor-pointer" data-delay={(item.id % 3) + 1}>
+                        <div key={item.id} className="group relative aspect-video sm:aspect-square overflow-hidden rounded-2xl cursor-pointer">
                             {/* Image */}
                             <img
                                 src={item.image}

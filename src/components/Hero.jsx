@@ -34,7 +34,7 @@ const Hero = () => {
 
                 {/* Description */}
                 <p className="scroll-reveal mt-2 text-lg md:text-[20px] text-white max-w-[800px] mx-auto mb-12 font-normal leading-relaxed" data-delay="2">
-                    We offer residential, commercial, post-construction, and facade cleaning services with a trained team, quality products, and guaranteed punctuality.
+                    We offer residential, commercial, and post-construction cleaning services with a trained team, quality products, and guaranteed punctuality.
                 </p>
 
                 {/* CTA Buttons */}
@@ -52,7 +52,7 @@ const Hero = () => {
                     {[
                         { num: '2+', label: 'Years of Experience' },
                         { num: '1,500+', label: 'Clients Served' },
-                        { num: '98%', label: 'Satisfaction Rate' },
+                        { num: '100%', label: 'Satisfaction Rate' },
                         { num: '4', label: 'Service Types' }
                     ].map((stat, idx) => (
                         <div key={idx} className="bg-white/10 backdrop-blur-sm rounded-[20px] p-4 border border-white/10 flex flex-col justify-center transition-colors hover:bg-white/15">

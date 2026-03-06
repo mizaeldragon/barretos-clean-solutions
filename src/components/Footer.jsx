@@ -3,6 +3,9 @@ import { Instagram, ArrowRight } from 'lucide-react';
 import logo from '../assets/images/logo-barretos.png';
 
 const Footer = () => {
+    const whatsappNumber = '15514075453';
+    const whatsappMessage = encodeURIComponent('Hi! I would like to request a quote.');
+
     return (
         <footer className="bg-[#0A1535] pt-20 pb-10">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -17,9 +20,14 @@ const Footer = () => {
                     </div>
 
                     <div className="relative z-10 shrink-0 border-t border-white/20 pt-6 md:pt-0 w-full md:w-auto text-center md:border-l md:border-t-0 md:pl-8">
-                        <button className="bg-white text-brand-teal hover:bg-brand-lightTeal px-8 py-4 rounded-full font-bold shadow-lg transition-transform hover:-translate-y-1 w-full md:w-auto inline-flex items-center justify-center gap-2">
+                        <a
+                            href={`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="bg-white text-brand-teal hover:bg-brand-lightTeal px-8 py-4 rounded-full font-bold shadow-lg transition-transform hover:-translate-y-1 w-full md:w-auto inline-flex items-center justify-center gap-2"
+                        >
                             Get Started Now <ArrowRight size={18} />
-                        </button>
+                        </a>
                     </div>
                 </div>
 

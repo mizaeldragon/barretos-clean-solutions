@@ -59,7 +59,7 @@ const About = () => {
                         Who We Are
                     </h2>
                     <p className="text-lg text-[#64748B] leading-relaxed">
-                        For over 15 years, transforming spaces and earning the trust of thousands of clients across the region.
+                        For over 2 years, transforming spaces and earning the trust of thousands of clients across the region.
                     </p>
                 </div>
 
@@ -82,7 +82,7 @@ const About = () => {
                                 <Users size={28} />
                             </div>
                             <div>
-                                <div className="text-[#1E3A8A] font-bold text-2xl md:text-3xl leading-none mb-1">50+</div>
+                                <div className="text-[#1E3A8A] font-bold text-2xl md:text-3xl leading-none mb-1">4</div>
                                 <div className="text-[#64748B] text-xs font-medium uppercase tracking-wider">Professionals</div>
                             </div>
                         </div>
@@ -95,7 +95,7 @@ const About = () => {
                         </h3>
                         <div className="text-[15px] text-[#64748B] space-y-5 leading-relaxed mb-8">
                             <p>
-                                Founded in 2009, <strong className="text-brand-darkTeal font-bold">Barretos Cleaning Solutions</strong> was born with a simple purpose: to offer quality cleaning with the warmth of treating every client like family. What started with a team of 5 now has over 50 dedicated professionals.
+                                It was founded on December 8, 2023, <strong className="text-brand-darkTeal font-bold">Barretos Cleaning Solutions</strong> was born with a simple purpose: to offer quality cleaning with the warmth of treating every client like family. What started with a team of 1 now has over 4 dedicated professionals.
                             </p>
                             <p>
                                 We serve homes, offices, condominiums, and large construction sites, always with the same values that brought us here: commitment, punctuality, and excellence.

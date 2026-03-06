@@ -50,8 +50,8 @@ const Hero = () => {
                 {/* Stats Section */}
                 <div className="scroll-reveal grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 w-full max-w-5xl mx-auto" data-delay="3">
                     {[
-                        { num: '15+', label: 'Years of Experience' },
-                        { num: '2,500+', label: 'Clients Served' },
+                        { num: '2+', label: 'Years of Experience' },
+                        { num: '1,500+', label: 'Clients Served' },
                         { num: '98%', label: 'Satisfaction Rate' },
                         { num: '4', label: 'Service Types' }
                     ].map((stat, idx) => (

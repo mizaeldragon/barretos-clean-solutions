@@ -295,7 +295,7 @@ const Contact = () => {
             </div>
 
             {smsToastVisible && (
-                <div className="fixed bottom-6 left-1/2 -translate-x-1/2 z-[70] bg-[#1E40FF] text-white text-sm font-semibold px-4 py-2.5 rounded-full shadow-[0_10px_24px_rgba(30,64,255,0.35)]">
+                <div className="fixed bottom-6 left-1/2 -translate-x-1/2 z-[70] bg-[#22c45d] text-white text-sm font-semibold px-4 py-2.5 rounded-full shadow-[0_10px_24px_rgba(30,64,255,0.35)]">
                     SMS opened successfully. Complete the send in your messages app.
                 </div>
             )}

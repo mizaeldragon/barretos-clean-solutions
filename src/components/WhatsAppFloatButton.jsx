@@ -2,7 +2,7 @@ import React from 'react';
 import whatssapIcon from '../assets/images/whatssap.png';
 
 const WhatsAppFloatButton = () => {
-    const whatsappNumber = '5511999999999';
+    const whatsappNumber = '15514075453';
     const defaultMessage = encodeURIComponent('Hi! I would like to request a quote.');
 
     return (
@@ -16,7 +16,7 @@ const WhatsAppFloatButton = () => {
                 aria-label="Chat on WhatsApp"
                 className="whatsapp-pulse relative w-full h-full rounded-full bg-[#25D366] text-white shadow-[0_12px_28px_rgba(37,211,102,0.35)] hover:scale-105 hover:shadow-[0_16px_34px_rgba(37,211,102,0.45)] transition-all duration-300 flex items-center justify-center"
             >
-                <img src={whatssapIcon} alt="WhatsApp" className="w-10 h-10 md:w-13 md:h-13 object-contain" />
+                <img src={whatssapIcon} alt="WhatsApp" className="w-10 h-10 md:w-11 md:h-11 object-contain" />
             </a>
         </div>
     );

@@ -108,9 +108,9 @@ const Header = () => {
 
                     {/* CTA Button */}
                     <div className="hidden md:flex items-center">
-                        <button className="bg-brand-teal hover:bg-brand-darkTeal text-white border border-white/50 px-6 py-2 rounded-full font-medium transition-all duration-300">
+                        <a href="#contact" className="bg-brand-teal hover:bg-brand-darkTeal text-white border border-white/50 px-6 py-2 rounded-full font-medium transition-all duration-300">
                             Request a Quote
-                        </button>
+                        </a>
                     </div>
 
                     {/* Mobile menu button */}
@@ -143,9 +143,9 @@ const Header = () => {
                                             {link.label}
                                         </a>
                                     ))}
-                                    <button className="mt-2 bg-gradient-to-r from-[#1E40FF] to-[#38C6FF] text-white px-5 py-2.5 rounded-full font-semibold transition-opacity hover:opacity-95 text-left">
+                                    <a href="#contact" onClick={() => setIsMobileMenuOpen(false)} className="mt-2 bg-gradient-to-r from-[#1E40FF] to-[#38C6FF] text-white px-5 py-2.5 rounded-full font-semibold transition-opacity hover:opacity-95 text-left">
                                         Request a Quote
-                                    </button>
+                                    </a>
                                 </div>
                             </nav>
                         </div>

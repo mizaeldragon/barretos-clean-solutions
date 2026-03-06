@@ -25,8 +25,8 @@ const Contact = () => {
     });
     const [phoneError, setPhoneError] = useState('');
 
-    const smsNumber = '+5599984735063';
-    const whatsappNumber = '5511999999999';
+    const smsNumber = '+15514075453';
+    const whatsappNumber = '15514075453';
 
     const formatPhone = (value) => {
         const raw = value.replace(/\D/g, '').slice(0, 11);
@@ -236,7 +236,7 @@ const Contact = () => {
                         <ContactInfoBox
                             icon={Phone}
                             title="PHONE / WHATSAPP"
-                            content="(11) 99999-9999"
+                            content="+1 (551) 407-5453"
                             subContent="Mon-Fri: 7am-6pm | Sat: 8am-2pm"
                         />
                         <ContactInfoBox
@@ -259,7 +259,7 @@ const Contact = () => {
                                 <a href="#" className="flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-[#ed4956] to-[#f77737] text-white rounded-[12px] text-[13px] font-semibold hover:opacity-90 transition-opacity">
                                     <Instagram size={16} /> Instagram
                                 </a>
-                                <a href="#" className="flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-[#1E40FF] to-[#38C6FF] text-white rounded-[12px] text-[13px] font-semibold hover:opacity-90 transition-opacity">
+                                <a href={`https://wa.me/${whatsappNumber}`} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-[#1E40FF] to-[#38C6FF] text-white rounded-[12px] text-[13px] font-semibold hover:opacity-90 transition-opacity">
                                     <Phone size={16} /> WhatsApp
                                 </a>
                             </div>

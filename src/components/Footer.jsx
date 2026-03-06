@@ -1,5 +1,5 @@
 import React from 'react';
-import { Instagram, Phone } from 'lucide-react';
+import { Instagram, ArrowRight } from 'lucide-react';
 import logo from '../assets/images/logo-barretos.png';
 
 const Footer = () => {
@@ -17,8 +17,8 @@ const Footer = () => {
                     </div>
 
                     <div className="relative z-10 shrink-0 border-t border-white/20 pt-6 md:pt-0 w-full md:w-auto text-center md:border-l md:border-t-0 md:pl-8">
-                        <button className="bg-white text-brand-teal hover:bg-brand-lightTeal px-8 py-4 rounded-full font-bold shadow-lg transition-transform hover:-translate-y-1 w-full md:w-auto">
-                            Get Started Now
+                        <button className="bg-white text-brand-teal hover:bg-brand-lightTeal px-8 py-4 rounded-full font-bold shadow-lg transition-transform hover:-translate-y-1 w-full md:w-auto inline-flex items-center justify-center gap-2">
+                            Get Started Now <ArrowRight size={18} />
                         </button>
                     </div>
                 </div>
@@ -37,9 +37,6 @@ const Footer = () => {
                         <div className="flex gap-4">
                             <a href="#" aria-label="Instagram" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-[#b7d4cf] hover:bg-brand-teal hover:text-white transition-colors duration-300">
                                 <Instagram size={18} />
-                            </a>
-                            <a href="#" aria-label="WhatsApp" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-[#b7d4cf] hover:bg-brand-teal hover:text-white transition-colors duration-300">
-                                <Phone size={18} />
                             </a>
                         </div>
                     </div>

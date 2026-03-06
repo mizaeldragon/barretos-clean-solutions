@@ -271,9 +271,6 @@ const Contact = () => {
                                 <a href="#" className="flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-[#ed4956] to-[#f77737] text-white rounded-[12px] text-[13px] font-semibold hover:opacity-90 transition-opacity">
                                     <Instagram size={16} /> Instagram
                                 </a>
-                                <a href={`https://wa.me/${whatsappNumber}`} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-[#1E40FF] to-[#38C6FF] text-white rounded-[12px] text-[13px] font-semibold hover:opacity-90 transition-opacity">
-                                    <Phone size={16} /> WhatsApp
-                                </a>
                             </div>
                         </div>
 

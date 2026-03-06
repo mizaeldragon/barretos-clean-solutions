@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, ArrowRight } from 'lucide-react';
 
 import logo from '../assets/images/logo-barretos.png';
 
@@ -108,8 +108,8 @@ const Header = () => {
 
                     {/* CTA Button */}
                     <div className="hidden md:flex items-center">
-                        <a href="#contact" className="bg-brand-teal hover:bg-brand-darkTeal text-white border border-white/50 px-6 py-2 rounded-full font-medium transition-all duration-300">
-                            Request a Quote
+                        <a href="#contact" className="bg-brand-teal hover:bg-brand-darkTeal text-white border border-white/50 px-6 py-2 rounded-full font-medium transition-all duration-300 inline-flex items-center gap-2">
+                            Request a Quote <ArrowRight size={16} />
                         </a>
                     </div>
 
@@ -143,8 +143,8 @@ const Header = () => {
                                             {link.label}
                                         </a>
                                     ))}
-                                    <a href="#contact" onClick={() => setIsMobileMenuOpen(false)} className="mt-2 bg-gradient-to-r from-[#1E40FF] to-[#38C6FF] text-white px-5 py-2.5 rounded-full font-semibold transition-opacity hover:opacity-95 text-left">
-                                        Request a Quote
+                                    <a href="#contact" onClick={() => setIsMobileMenuOpen(false)} className="mt-2 bg-gradient-to-r from-[#1E40FF] to-[#38C6FF] text-white px-5 py-2.5 rounded-full font-semibold transition-opacity hover:opacity-95 text-left inline-flex items-center gap-2">
+                                        Request a Quote <ArrowRight size={16} />
                                     </a>
                                 </div>
                             </nav>

@@ -20,6 +20,7 @@ const Contact = () => {
         name: '',
         phone: '',
         email: '',
+        address: '',
         service: '',
         message: ''
     };
@@ -29,7 +30,7 @@ const Contact = () => {
     const [phoneError, setPhoneError] = useState('');
     const [smsToastVisible, setSmsToastVisible] = useState(false);
 
-    const smsNumber = '+15514075453';
+    const smsNumber = '15514075453';
     const whatsappNumber = '15514075453';
 
     const formatPhone = (value) => {
@@ -83,6 +84,7 @@ const Contact = () => {
             `Name: ${formData.name}`,
             `Phone: ${formData.phone}`,
             `Email: ${formData.email || 'Not informed'}`,
+            `Address: ${formData.address || 'Not informed'}`,
             `Service: ${serviceLabel}`,
             `Message: ${formData.message || 'Not informed'}`
         ].join('\n');
@@ -106,7 +108,7 @@ const Contact = () => {
         if (!validateBeforeSend()) return;
 
         const message = encodeURIComponent(buildMessage());
-        const cleanSmsNumber = smsNumber.replace(/[^\d+]/g, '');
+        const cleanSmsNumber = smsNumber.replace(/\D/g, '');
         const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
         const separator = isIOS ? '&' : '?';
 
@@ -192,6 +194,18 @@ const Contact = () => {
                                     onChange={handleChange}
                                     className="w-full px-4 py-3 bg-white border border-[#DFE7FF] rounded-[10px] focus:ring-2 focus:ring-[#38C6FF] focus:border-transparent outline-none transition-all placeholder:text-[#A3B1C6] text-[14px]"
                                     placeholder="you@email.com"
+                                />
+                            </div>
+
+                            <div className="space-y-2">
+                                <label htmlFor="address" className="text-[13px] font-semibold text-[#64748B]">Address</label>
+                                <input
+                                    type="text"
+                                    id="address"
+                                    value={formData.address}
+                                    onChange={handleChange}
+                                    className="w-full px-4 py-3 bg-white border border-[#DFE7FF] rounded-[10px] focus:ring-2 focus:ring-[#38C6FF] focus:border-transparent outline-none transition-all placeholder:text-[#A3B1C6] text-[14px]"
+                                    placeholder="Street, number, city, ZIP"
                                 />
                             </div>
 

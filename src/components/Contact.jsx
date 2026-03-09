@@ -32,6 +32,9 @@ const Contact = () => {
 
     const smsNumber = '15514075453';
     const whatsappNumber = '15514075453';
+    const qrMessage = 'Hi! I would like to request a quote.';
+    const whatsappDirectLink = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(qrMessage)}`;
+    const whatsappQrCodeSrc = `https://api.qrserver.com/v1/create-qr-code/?size=220x220&margin=12&data=${encodeURIComponent(whatsappDirectLink)}`;
 
     const formatPhone = (value) => {
         const raw = value.replace(/\D/g, '').slice(0, 11);
@@ -275,6 +278,25 @@ const Contact = () => {
                             content="123 Flores St - Downtown"
                             subContent="Sao Paulo - SP, 01310-100"
                         />
+
+                        <div className="bg-white p-6 rounded-[16px] border border-[#E8EFFF] shadow-[0_8px_22px_rgba(37,99,255,0.1)] mt-1">
+                            <h4 className="font-bold text-[#1E3A8A] text-[13px] mb-1">Scan to chat on WhatsApp</h4>
+                            <p className="text-[12px] text-[#64748B] mb-4">Point your camera at the QR code to open WhatsApp.</p>
+                            <a
+                                href={whatsappDirectLink}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="inline-block rounded-[14px] border border-[#E8EFFF] p-2 bg-white hover:shadow-[0_10px_24px_rgba(37,99,255,0.16)] transition-shadow"
+                                aria-label="Open WhatsApp chat"
+                            >
+                                <img
+                                    src={whatsappQrCodeSrc}
+                                    alt="WhatsApp QR code"
+                                    className="w-[150px] h-[150px] sm:w-[170px] sm:h-[170px] object-cover rounded-[10px]"
+                                    loading="lazy"
+                                />
+                            </a>
+                        </div>
 
                         {/* Social Media */}
                         <div className="bg-white p-6 rounded-[16px] border border-[#E8EFFF] shadow-[0_8px_22px_rgba(37,99,255,0.1)] mt-1 cursor-pointer">

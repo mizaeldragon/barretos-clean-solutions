@@ -269,7 +269,7 @@ const Contact = () => {
                         <ContactInfoBox
                             icon={Mail}
                             title="EMAIL"
-                            content="contact@barretoscleansolutions.com"
+                            content="barretoscleaningsolutions@gmail.com"
                             subContent="We respond within 2 hours"
                         />
                         <ContactInfoBox

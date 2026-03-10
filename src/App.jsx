@@ -8,6 +8,7 @@ import Gallery from './components/Gallery';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import WhatsAppFloatButton from './components/WhatsAppFloatButton';
+import CursorGlow from './components/CursorGlow';
 import './App.css';
 
 function App() {
@@ -46,6 +47,7 @@ function App() {
       </main>
       <Footer />
       <WhatsAppFloatButton />
+      <CursorGlow />
     </div>
   );
 }

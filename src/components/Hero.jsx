@@ -39,11 +39,11 @@ const Hero = () => {
 
                 {/* CTA Buttons */}
                 <div className="scroll-reveal flex flex-col sm:flex-row justify-center gap-5 mb-24 w-full relative z-10" data-delay="3">
-                    <a href="#contact" className="hero-glow-btn group w-full sm:w-auto inline-flex items-center justify-between rounded-full p-[1px] bg-gradient-to-r from-[#29BCFF] via-[#2563FF] to-[#53C9FF] shadow-[0_12px_24px_rgba(37,99,255,0.3)] hover:shadow-[0_16px_30px_rgba(37,99,255,0.38)] transition-all">
-                        <span className="hero-glow-inner px-7 py-3.5 rounded-full bg-gradient-to-r from-[#0A2A7A] to-[#1B55DA] text-white font-bold text-[15px] tracking-wide uppercase whitespace-nowrap">
+                    <a href="#contact" className="hero-glow-btn group w-full sm:w-auto inline-flex items-center justify-center sm:justify-between gap-2 sm:gap-0 rounded-full p-[1px] bg-gradient-to-r from-[#29BCFF] via-[#2563FF] to-[#53C9FF] shadow-[0_12px_24px_rgba(37,99,255,0.3)] hover:shadow-[0_16px_30px_rgba(37,99,255,0.38)] transition-all">
+                        <span className="hero-glow-inner px-6 sm:px-7 py-3.5 rounded-full sm:bg-gradient-to-r sm:from-[#0A2A7A] sm:to-[#1B55DA] text-white font-bold text-[15px] sm:tracking-wide sm:uppercase whitespace-nowrap">
                             Get a Free Quote
                         </span>
-                        <span className="text-white flex items-center justify-center pr-4 pl-2 shrink-0">
+                        <span className="text-white flex items-center justify-center pr-1 sm:pr-4 pl-0 sm:pl-2 shrink-0">
                             <ArrowRight size={18} />
                         </span>
                     </a>

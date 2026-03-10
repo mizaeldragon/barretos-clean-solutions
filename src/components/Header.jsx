@@ -145,8 +145,10 @@ const Header = () => {
                                             {link.label}
                                         </a>
                                     ))}
-                                    <a href="#contact" onClick={() => setIsMobileMenuOpen(false)} className="mt-2 bg-gradient-to-r from-[#1E40FF] to-[#38C6FF] text-white px-5 py-2.5 rounded-full font-semibold transition-opacity hover:opacity-95 text-left inline-flex items-center gap-2">
-                                        Request a Quote <ArrowRight size={16} />
+                                    <a href="#contact" onClick={() => setIsMobileMenuOpen(false)} className="hero-glow-btn hero-glow-strong mt-2 rounded-full p-[1px] inline-flex w-full">
+                                        <span className="hero-glow-inner bg-gradient-to-r from-[#1E40FF] to-[#38C6FF] text-white px-5 py-2.5 rounded-full font-semibold transition-opacity hover:opacity-95 w-full inline-flex items-center justify-between">
+                                            Request a Quote <ArrowRight size={16} />
+                                        </span>
                                     </a>
                                 </div>
                             </nav>

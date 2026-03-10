@@ -36,8 +36,79 @@
     }
   }
 
+  @keyframes heroGlowSpin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  @keyframes heroGlowPulse {
+    0%, 100% {
+      opacity: 0.65;
+    }
+    50% {
+      opacity: 1;
+    }
+  }
+
   .whatsapp-pulse {
     animation: whatsappPulse 2s ease-in-out infinite;
+  }
+
+  .hero-glow-btn {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+  }
+
+  .hero-glow-btn::before {
+    content: "";
+    position: absolute;
+    inset: -180%;
+    z-index: 0;
+    background: conic-gradient(
+      from 0deg,
+      rgba(56, 198, 255, 0) 0deg,
+      rgba(56, 198, 255, 0.9) 55deg,
+      rgba(160, 226, 255, 0.95) 95deg,
+      rgba(56, 198, 255, 0) 150deg,
+      rgba(56, 198, 255, 0) 360deg
+    );
+    filter: blur(10px);
+    animation: heroGlowSpin 3.4s linear infinite, heroGlowPulse 2.8s ease-in-out infinite;
+  }
+
+  .hero-glow-btn .hero-glow-inner {
+    position: relative;
+    z-index: 1;
+  }
+
+  .hero-glow-btn.hero-glow-strong::before {
+    inset: -120%;
+    filter: blur(8px);
+    background: conic-gradient(
+      from 0deg,
+      rgba(56, 198, 255, 0) 0deg,
+      rgba(56, 198, 255, 1) 40deg,
+      rgba(196, 240, 255, 1) 80deg,
+      rgba(56, 198, 255, 0) 130deg,
+      rgba(56, 198, 255, 0) 360deg
+    );
+    animation: heroGlowSpin 2.4s linear infinite, heroGlowPulse 1.8s ease-in-out infinite;
+  }
+
+  .hero-glow-btn.hero-glow-strong::after {
+    content: "";
+    position: absolute;
+    inset: -2px;
+    border-radius: 9999px;
+    z-index: 0;
+    pointer-events: none;
+    box-shadow:
+      0 0 0 1px rgba(147, 221, 255, 0.9),
+      0 0 18px rgba(56, 198, 255, 0.62),
+      0 0 30px rgba(30, 64, 255, 0.45);
+    animation: heroGlowPulse 1.8s ease-in-out infinite;
   }
 
   .scroll-reveal {
@@ -73,6 +144,10 @@
   }
 
   @media (prefers-reduced-motion: reduce) {
+    .hero-glow-btn::before {
+      animation: none;
+    }
+
     .scroll-reveal,
     .scroll-reveal.is-visible {
       opacity: 1;

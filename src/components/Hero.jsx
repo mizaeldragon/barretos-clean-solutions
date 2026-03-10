@@ -39,8 +39,13 @@ const Hero = () => {
 
                 {/* CTA Buttons */}
                 <div className="scroll-reveal flex flex-col sm:flex-row justify-center gap-5 mb-24 w-full relative z-10" data-delay="3">
-                    <a href="#contact" className="bg-[#2563FF] text-white px-8 py-3.5 rounded-full font-bold text-[17px] hover:bg-[#4DA3FF] transition-colors shadow-lg shadow-[#2563FF]/30 w-full sm:w-auto text-center inline-flex items-center justify-center gap-2">
-                        Get a Free Quote <ArrowRight size={18} />
+                    <a href="#contact" className="hero-glow-btn group w-full sm:w-auto inline-flex items-center justify-between rounded-full p-[1px] bg-gradient-to-r from-[#29BCFF] via-[#2563FF] to-[#53C9FF] shadow-[0_12px_24px_rgba(37,99,255,0.3)] hover:shadow-[0_16px_30px_rgba(37,99,255,0.38)] transition-all">
+                        <span className="hero-glow-inner px-7 py-3.5 rounded-full bg-gradient-to-r from-[#0A2A7A] to-[#1B55DA] text-white font-bold text-[15px] tracking-wide uppercase whitespace-nowrap">
+                            Get a Free Quote
+                        </span>
+                        <span className="text-white flex items-center justify-center pr-4 pl-2 shrink-0">
+                            <ArrowRight size={18} />
+                        </span>
                     </a>
                     <a href="#services" className="bg-transparent border-2 border-white text-white px-8 py-3.5 rounded-full font-bold text-[17px] hover:bg-white/10 transition-colors w-full sm:w-auto text-center inline-flex items-center justify-center gap-2">
                         Explore Our Services <ArrowRight size={18} />

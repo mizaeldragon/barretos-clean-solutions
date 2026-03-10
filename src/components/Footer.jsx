@@ -24,9 +24,11 @@ const Footer = () => {
                             href={`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="bg-white text-brand-teal hover:bg-brand-lightTeal px-8 py-4 rounded-full font-bold shadow-lg transition-transform hover:-translate-y-1 w-full md:w-auto inline-flex items-center justify-center gap-2"
+                            className="hero-glow-btn hero-glow-strong p-[1px] rounded-full shadow-lg transition-transform hover:-translate-y-1 w-full md:w-auto inline-flex"
                         >
-                            Get Started Now <ArrowRight size={18} />
+                            <span className="hero-glow-inner bg-white text-brand-teal hover:bg-brand-lightTeal px-8 py-4 rounded-full font-bold w-full md:w-auto inline-flex items-center justify-center gap-2 transition-colors">
+                                Get Started Now <ArrowRight size={18} />
+                            </span>
                         </a>
                     </div>
                 </div>

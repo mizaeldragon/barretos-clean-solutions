@@ -108,8 +108,10 @@ const Header = () => {
 
                     {/* CTA Button */}
                     <div className="hidden md:flex items-center">
-                        <a href="#contact" className="bg-brand-teal hover:bg-brand-darkTeal text-white border border-white/50 px-6 py-2 rounded-full font-medium transition-all duration-300 inline-flex items-center gap-2">
-                            Request a Quote <ArrowRight size={16} />
+                        <a href="#contact" className="hero-glow-btn hero-glow-strong group inline-flex items-center rounded-full p-[1px] bg-gradient-to-r from-[#29BCFF] via-[#2563FF] to-[#53C9FF] shadow-[0_10px_20px_rgba(37,99,255,0.28)] hover:shadow-[0_14px_24px_rgba(37,99,255,0.38)] transition-all">
+                            <span className="hero-glow-inner px-5 py-2 rounded-full bg-gradient-to-r from-[#0A2A7A] to-[#1B55DA] text-white font-semibold inline-flex items-center gap-2">
+                                Request a Quote <ArrowRight size={16} />
+                            </span>
                         </a>
                     </div>
 

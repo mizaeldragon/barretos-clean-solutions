@@ -243,16 +243,20 @@ const Contact = () => {
                             <div className="flex flex-col sm:flex-row gap-3 mt-2">
                                 <button
                                     type="submit"
-                                    className="w-full bg-gradient-to-r from-[#1E40FF] to-[#38C6FF] hover:opacity-95 text-white font-bold py-3.5 px-8 rounded-full shadow-md flex items-center justify-center gap-2 transition-opacity duration-300 text-[15px]"
+                                    className="hero-glow-btn hero-glow-strong w-full rounded-full p-[1px] shadow-md transition-all duration-300"
                                 >
-                                    <Send size={18} /> Send via SMS
+                                    <span className="hero-glow-inner w-full bg-gradient-to-r from-[#1E40FF] to-[#38C6FF] hover:opacity-95 text-white font-bold py-3.5 px-8 rounded-full flex items-center justify-center gap-2 transition-opacity duration-300 text-[15px]">
+                                        <Send size={18} /> Send via SMS
+                                    </span>
                                 </button>
                                 <button
                                     type="button"
                                     onClick={openWhatsapp}
-                                    className="w-full bg-gradient-to-r from-[#1E40FF] to-[#38C6FF] hover:opacity-95 text-white font-bold py-3.5 px-8 rounded-full shadow-md flex items-center justify-center gap-2 transition-opacity duration-300 text-[15px]"
+                                    className="hero-glow-btn hero-glow-strong w-full rounded-full p-[1px] shadow-md transition-all duration-300"
                                 >
-                                    <Send size={18} /> Send via WhatsApp
+                                    <span className="hero-glow-inner w-full bg-gradient-to-r from-[#1E40FF] to-[#38C6FF] hover:opacity-95 text-white font-bold py-3.5 px-8 rounded-full flex items-center justify-center gap-2 transition-opacity duration-300 text-[15px]">
+                                        <Send size={18} /> Send via WhatsApp
+                                    </span>
                                 </button>
                             </div>
                         </form>

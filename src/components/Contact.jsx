@@ -317,7 +317,7 @@ const Contact = () => {
                         </div>
 
                         {/* Map Placeholder - replace query/address later with your real location */}
-                        <div className="w-full h-[190px] bg-gray-200 rounded-[16px] overflow-hidden relative shadow-[0_8px_22px_rgba(37,99,255,0.1)] mt-1 border border-[#E8EFFF] cursor-pointer">
+                        <div className="w-full h-[300px] bg-gray-200 rounded-[16px] overflow-hidden relative shadow-[0_8px_22px_rgba(37,99,255,0.1)] mt-1 border border-[#E8EFFF] cursor-pointer">
                             <iframe
                                 title="Company Location Map"
                                 src="https://www.google.com/maps?q=8801+Torresdale+Avenue,+Philadelphia,+PA+19136&output=embed"

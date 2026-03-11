@@ -305,7 +305,12 @@ const Contact = () => {
                         <div className="bg-white p-6 rounded-[16px] border border-[#E8EFFF] shadow-[0_8px_22px_rgba(37,99,255,0.1)] mt-1 cursor-pointer">
                             <h4 className="font-bold text-[#1E3A8A] text-[13px] mb-4">Follow us on social media</h4>
                             <div className="flex flex-wrap gap-2.5">
-                                <a href="#" className="flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-[#ed4956] to-[#f77737] text-white rounded-[12px] text-[13px] font-semibold hover:opacity-90 transition-opacity">
+                                <a
+                                    href="https://www.instagram.com/barre_toscleaningservices/?utm_source=ig_web_button_share_sheet"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-[#ed4956] to-[#f77737] text-white rounded-[12px] text-[13px] font-semibold hover:opacity-90 transition-opacity"
+                                >
                                     <Instagram size={16} /> Instagram
                                 </a>
                             </div>

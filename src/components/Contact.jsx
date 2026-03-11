@@ -279,8 +279,7 @@ const Contact = () => {
                         <ContactInfoBox
                             icon={MapPin}
                             title="ADDRESS"
-                            content="123 Flores St - Downtown"
-                            subContent="Sao Paulo - SP, 01310-100"
+                            content="Building C – Suite 104 8801 Torresdale Avenue Philadelphia, PA 19136 United States"
                         />
 
                         <div className="bg-white p-6 rounded-[16px] border border-[#E8EFFF] shadow-[0_8px_22px_rgba(37,99,255,0.1)] mt-1">
@@ -316,7 +315,7 @@ const Contact = () => {
                         <div className="w-full h-[190px] bg-gray-200 rounded-[16px] overflow-hidden relative shadow-[0_8px_22px_rgba(37,99,255,0.1)] mt-1 border border-[#E8EFFF] cursor-pointer">
                             <iframe
                                 title="Company Location Map"
-                                src="https://www.google.com/maps?q=Sao+Paulo+SP&output=embed"
+                                src="https://www.google.com/maps?q=8801+Torresdale+Avenue,+Philadelphia,+PA+19136&output=embed"
                                 width="100%"
                                 height="100%"
                                 style={{ border: 0 }}

@@ -1,15 +1,15 @@
 import React, { useRef, useState } from 'react';
 import { MapPin, Phone, Mail, Send, Instagram } from 'lucide-react';
 
-const ContactInfoBox = ({ icon: Icon, title, content, subContent }) => (
-    <div className="flex gap-4 items-center p-6 bg-white rounded-[16px] border border-[#E8EFFF] shadow-[0_8px_22px_rgba(37,99,255,0.1)] cursor-pointer">
+const ContactInfoBox = ({ icon: Icon, title, content, subContent, contentClassName = '' }) => (
+    <div className="flex gap-4 items-center p-6 bg-white rounded-[16px] border border-[#E8EFFF] shadow-[0_8px_22px_rgba(37,99,255,0.1)] cursor-pointer min-w-0 max-w-full overflow-hidden">
         <div className="w-[44px] h-[44px] bg-gradient-to-r from-[#1E40FF] to-[#38C6FF] text-white rounded-[12px] flex items-center justify-center shrink-0">
             <Icon size={20} strokeWidth={2.5} />
         </div>
-        <div>
+        <div className="min-w-0">
             <h4 className="font-bold text-[#64748B] text-[11px] tracking-wider uppercase mb-0.5">{title}</h4>
-            <p className="font-bold text-[#1E3A8A] text-[15px]">{content}</p>
-            {subContent && <p className="text-[#94A3B8] text-[12px] mt-0.5">{subContent}</p>}
+            <p className={`font-bold text-[#1E3A8A] text-[15px] leading-tight break-words ${contentClassName}`}>{content}</p>
+            {subContent && <p className="text-[#94A3B8] text-[12px] mt-0.5 break-words">{subContent}</p>}
         </div>
     </div>
 );
@@ -139,8 +139,8 @@ const Contact = () => {
     };
 
     return (
-        <section id="contact" className="py-24 bg-[#F1F5FF] relative scroll-mt-24 md:scroll-mt-28">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <section id="contact" className="py-24 pb-32 md:pb-24 bg-[#F1F5FF] relative scroll-mt-24 md:scroll-mt-28 overflow-x-clip">
+            <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
                 <div className="scroll-reveal text-center max-w-3xl mx-auto mb-16 space-y-3">
                     <span className="text-[#1E40FF] font-bold tracking-[0.2em] text-[11px] uppercase block">
                         GET IN TOUCH
@@ -275,6 +275,7 @@ const Contact = () => {
                             title="EMAIL"
                             content="barretoscleaningsolutions@gmail.com"
                             subContent="We respond within 2 hours"
+                            contentClassName="break-all"
                         />
                         <ContactInfoBox
                             icon={MapPin}
@@ -295,7 +296,7 @@ const Contact = () => {
                                 <img
                                     src={whatsappQrCodeSrc}
                                     alt="WhatsApp QR code"
-                                    className="w-[150px] h-[150px] sm:w-[170px] sm:h-[170px] object-cover rounded-[10px]"
+                                    className="w-[140px] h-[140px] sm:w-[170px] sm:h-[170px] object-cover rounded-[10px]"
                                     loading="lazy"
                                 />
                             </a>
@@ -317,18 +318,25 @@ const Contact = () => {
                         </div>
 
                         {/* Map Placeholder - replace query/address later with your real location */}
-                        <div className="w-full h-[300px] bg-gray-200 rounded-[16px] overflow-hidden relative shadow-[0_8px_22px_rgba(37,99,255,0.1)] mt-1 border border-[#E8EFFF] cursor-pointer">
+                        <a
+                            href="https://www.google.com/maps?q=8801+Torresdale+Avenue,+Philadelphia,+PA+19136"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="block w-full max-w-full h-[220px] sm:h-[260px] md:h-[300px] bg-gray-200 rounded-[16px] overflow-hidden relative shadow-[0_8px_22px_rgba(37,99,255,0.1)] mt-1 border border-[#E8EFFF] cursor-pointer"
+                            aria-label="Open company location on Google Maps"
+                        >
                             <iframe
                                 title="Company Location Map"
                                 src="https://www.google.com/maps?q=8801+Torresdale+Avenue,+Philadelphia,+PA+19136&output=embed"
                                 width="100%"
                                 height="100%"
+                                className="block w-full h-full pointer-events-none md:pointer-events-auto"
                                 style={{ border: 0 }}
                                 allowFullScreen
                                 loading="lazy"
                                 referrerPolicy="no-referrer-when-downgrade"
                             />
-                        </div>
+                        </a>
                     </div>
                 </div>
             </div>

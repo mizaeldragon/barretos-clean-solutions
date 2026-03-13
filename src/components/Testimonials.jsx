@@ -26,7 +26,7 @@ const Testimonials = () => {
     const baseReviews = [
         {
             id: 1,
-            content: "We hired Barretos Cleaning Solutions to clean our office weekly. The difference is huge — always a clean environment, discreet and professional team. I recommend them to every company!",
+            content: "We hired Barreto´s Cleaning Solutions to clean our office weekly. The difference is huge — always a clean environment, discreet and professional team. I recommend them to every company!",
             author: "Carlos Mendes",
             role: "Commercial Director - TechCorp",
             rating: 5,
@@ -44,7 +44,7 @@ const Testimonials = () => {
         },
         {
             id: 3,
-            content: "I manage a condominium with 80 units and Barretos Cleaning Solutions takes care of all common areas. Punctuality, quality, and fair pricing. We're completely satisfied!",
+            content: "I manage a condominium with 80 units and Barreto´s Cleaning Solutions takes care of all common areas. Punctuality, quality, and fair pricing. We're completely satisfied!",
             author: "Roberto Santos",
             role: "Condo Administrator",
             rating: 5,
@@ -53,7 +53,7 @@ const Testimonials = () => {
         },
         {
             id: 4,
-            content: "Barretos Cleaning Solutions has completely transformed my home. Their attention to detail is unmatched, and coming home to a perfectly clean house after a long day is priceless. Highly recommended!",
+            content: "Barreto´s Cleaning Solutions has completely transformed my home. Their attention to detail is unmatched, and coming home to a perfectly clean house after a long day is priceless. Highly recommended!",
             author: "Sarah Jenkins",
             role: "Homeowner",
             rating: 5,

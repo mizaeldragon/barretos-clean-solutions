@@ -86,7 +86,7 @@ const Header = () => {
                     <div className={`flex justify-between items-center transition-all duration-300 ${isScrolled ? 'py-2 md:py-3' : 'py-4 md:py-6'}`}>
                     {/* Logo */}
                     <div className="flex items-center cursor-pointer">
-                        <img src={logo} alt="Barretos Cleaning Solutions" className={`w-auto drop-shadow-md transition-all duration-300 ${isScrolled ? 'h-12 md:h-16' : 'h-16 md:h-24'}`} />
+                        <img src={logo} alt="Barreto´s Cleaning Solutions" className={`w-auto drop-shadow-md transition-all duration-300 ${isScrolled ? 'h-12 md:h-16' : 'h-16 md:h-24'}`} />
                     </div>
 
                     {/* Desktop Navigation */}

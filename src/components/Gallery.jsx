@@ -23,7 +23,7 @@ const Gallery = () => {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="scroll-reveal text-center max-w-3xl mx-auto mb-16">
                     <h2 className="text-sm font-bold tracking-widest text-brand-teal uppercase mb-3">Our Work</h2>
-                    <p className="text-3xl md:text-4xl font-bold text-brand-navy mb-4">Barretos Cleaning Solutions in Action</p>
+                    <p className="text-3xl md:text-4xl font-bold text-brand-navy mb-4">Barreto´s Cleaning Solutions in Action</p>
                     <p className="text-brand-slate text-lg">Browse our gallery to see the transformative results of our professional cleaning services.</p>
                 </div>
 

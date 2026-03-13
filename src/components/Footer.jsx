@@ -39,7 +39,7 @@ const Footer = () => {
                     {/* Brand & Intro */}
                     <div className="lg:col-span-1">
                         <div className="flex items-center mb-6 cursor-pointer">
-                            <img src={logo} alt="Barretos Cleaning Solutions" className="h-14 w-auto drop-shadow-md" />
+                            <img src={logo} alt="Barreto´s Cleaning Solutions" className="h-14 w-auto drop-shadow-md" />
                         </div>
                         <p className="text-[#b7d4cf] mb-8 leading-relaxed text-sm">
                             Providing top-tier residential and commercial cleaning services tailored to your specific needs. Your satisfaction is our priority.
@@ -86,7 +86,7 @@ const Footer = () => {
                 {/* Copyright Footer */}
                 <div className="scroll-reveal pt-8 border-t border-white/10 text-center md:flex md:justify-between items-center text-sm" data-delay="2">
                     <p className="text-[#93b8b1] mb-4 md:mb-0">
-                        &copy; {new Date().getFullYear()} Barretos Cleaning Solutions. All rights reserved.
+                        &copy; {new Date().getFullYear()} Barreto´s Cleaning Solutions. All rights reserved.
                     </p>
                     <div className="flex justify-center gap-6 text-[#93b8b1]">
                         <a href="/terms-of-service.html" className="hover:text-brand-teal transition-colors">Terms of Service</a>
